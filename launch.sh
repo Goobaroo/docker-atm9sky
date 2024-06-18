@@ -16,12 +16,9 @@ if ! [[ -f 'server-1.0.4.zip' ]]; then
 	rm -fr config defaultconfigs kubejs mods packmenu *.zip forge*
 	curl -Lo 'server-1.0.4.zip' 'https://edge.forgecdn.net/files/5426/229/server-1.0.4.zip' || exit 9
 	unzip -u -o 'server-1.0.4.zip' -d /data
-	DIR_TEST=$(find . -type d -maxdepth 1 | tail -1 | sed 's/^.\{2\}//g')
-	if [[ $(find . -type d -maxdepth 1 | wc -l) -gt 1 ]]; then
-		cd "${DIR_TEST}"
-		mv -f * /data
-		cd /data
-		rm -fr "$DIR_TEST"
+	if [[ -d $(echo server-1.0.4.zip | sed 's/.zip//') ]]; then
+		mv -f $(echo server-1.0.4.zip | sed 's/.zip//')/* /data
+		rm -fr $(echo server-1.0.4.zip | sed 's/.zip//')
 	fi
 	curl -Lo forge-${FORGE_VERSION}-installer.jar http://files.minecraftforge.net/maven/net/minecraftforge/forge/$FORGE_VERSION/forge-$FORGE_VERSION-installer.jar
 	java -jar forge-${FORGE_VERSION}-installer.jar --installServer
