@@ -12,13 +12,13 @@ else
 	exit 99
 fi
 
-if ! [[ -f 'server-1.0.5.zip' ]]; then
+if ! [[ -f 'server-1.0.6.zip' ]]; then
 	rm -fr config defaultconfigs kubejs mods packmenu *.zip forge*
-	curl -Lo 'server-1.0.5.zip' 'https://edge.forgecdn.net/files/5442/899/server-1.0.5.zip' || exit 9
-	unzip -u -o 'server-1.0.5.zip' -d /data
-	if [[ -d $(echo server-1.0.5.zip | sed 's/.zip//') ]]; then
-		mv -f $(echo server-1.0.5.zip | sed 's/.zip//')/* /data
-		rm -fr $(echo server-1.0.5.zip | sed 's/.zip//')
+	curl -Lo 'server-1.0.6.zip' 'https://edge.forgecdn.net/files/5478/251/server-1.0.6.zip' || exit 9
+	unzip -u -o 'server-1.0.6.zip' -d /data
+	if [[ -d $(echo server-1.0.6.zip | sed 's/.zip//') ]]; then
+		mv -f $(echo server-1.0.6.zip | sed 's/.zip//')/* /data
+		rm -fr $(echo server-1.0.6.zip | sed 's/.zip//')
 	fi
 	curl -Lo forge-${FORGE_VERSION}-installer.jar http://files.minecraftforge.net/maven/net/minecraftforge/forge/$FORGE_VERSION/forge-$FORGE_VERSION-installer.jar
 	java -jar forge-${FORGE_VERSION}-installer.jar --installServer
