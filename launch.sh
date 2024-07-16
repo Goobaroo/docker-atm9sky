@@ -12,10 +12,10 @@ else
 	exit 99
 fi
 
-if ! [[ -f 'server-1.0.8.zip' ]]; then
+if ! [[ -f 'server-1.0.8a.zip' ]]; then
 	rm -fr config defaultconfigs kubejs mods packmenu *.zip forge*
-	curl -Lo 'server-1.0.8.zip' 'https://edge.forgecdn.net/files/5527/366/server-1.0.8.zip' || exit 9
-	unzip -u -o 'server-1.0.8.zip' -d /data
+	curl -Lo 'server-1.0.8a.zip' 'https://edge.forgecdn.net/files/5535/718/server-1.0.8a.zip' || exit 9
+	unzip -u -o 'server-1.0.8a.zip' -d /data
 	if [[ $(find /data -maxdepth 2 -name 'mods' -type d | wc -c) -gt 11 ]]; then
 	  INSTALL_SUBDIR=$(find /data -maxdepth 2 -name 'mods' -type d | sed 's/\/mods//')
 	  mv -f $(echo $INSTALL_SUBDIR)/* /data
