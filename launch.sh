@@ -14,7 +14,7 @@ fi
 
 if ! [[ -f 'atm9sky-1.1.5.zip' ]]; then
 	rm -fr config defaultconfigs kubejs mods packmenu *.zip forge*
-	curl -Lo 'atm9sky-1.1.5.zip' 'https://edge.forgecdn.net/files/6253/991/atm9sky-1.1.5.zip' || exit 9
+	curl -Lo 'atm9sky-1.1.5.zip' 'https://edge.forgecdn.net/files/6253/993/server-1.1.5.zip' || exit 9
 	unzip -u -o 'atm9sky-1.1.5.zip' -d /data
 	if [[ $(find /data -maxdepth 2 -name 'mods' -type d | wc -c) -gt 11 ]]; then
 	  INSTALL_SUBDIR=$(find /data -maxdepth 2 -name 'mods' -type d | sed 's/\/mods//')
