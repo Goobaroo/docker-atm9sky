@@ -2,7 +2,7 @@
 
 set -x
 
-FORGE_VERSION=1.20.1-47.3.33
+FORGE_VERSION=1.20.1-47.3.0
 cd /data
 
 if ! [[ "$EULA" = "false" ]]; then
@@ -12,10 +12,10 @@ else
 	exit 99
 fi
 
-if ! [[ -f 'atm9sky-1.1.5.zip' ]]; then
+if ! [[ -f 'server-1.1.3.zip' ]]; then
 	rm -fr config defaultconfigs kubejs mods packmenu *.zip forge*
-	curl -Lo 'atm9sky-1.1.5.zip' 'https://edge.forgecdn.net/files/6253/991/atm9sky-1.1.5.zip' || exit 9
-	unzip -u -o 'atm9sky-1.1.5.zip' -d /data
+	curl -Lo 'server-1.1.3.zip' 'https://edge.forgecdn.net/files/5952/312/server-1.1.3.zip' || exit 9
+	unzip -u -o 'server-1.1.3.zip' -d /data
 	if [[ $(find /data -maxdepth 2 -name 'mods' -type d | wc -c) -gt 11 ]]; then
 	  INSTALL_SUBDIR=$(find /data -maxdepth 2 -name 'mods' -type d | sed 's/\/mods//')
 	  mv -f $(echo $INSTALL_SUBDIR)/* /data
