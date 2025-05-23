@@ -2,9 +2,9 @@
 
 FROM openjdk:17-buster
 
-LABEL version="1.1.7"
+LABEL version="1.1.7b"
 LABEL homepage.group=Minecraft
-LABEL homepage.name="atm9sky-1.1.7"
+LABEL homepage.name="atm9sky-1.1.7b"
 LABEL homepage.icon="https://media.forgecdn.net/avatars/999/347/638518044265918139.png"
 LABEL homepage.widget.type=minecraft
 LABEL homepage.widget.url=udp://All-The-Mods-9-To-The-Sky:25565
