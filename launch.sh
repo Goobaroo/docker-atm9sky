@@ -2,7 +2,7 @@
 
 set -x
 
-FORGE_VERSION=1.20.1-47.4.0
+FORGE_VERSION=1.20.1-47.4.10
 cd /data
 
 if ! [[ "$EULA" = "false" ]]; then
@@ -12,10 +12,10 @@ else
 	exit 99
 fi
 
-if ! [[ -f 'ServerFiles-1.1.8.zip' ]]; then
+if ! [[ -f 'ServerFiles-1.1.9.zip' ]]; then
 	rm -fr config defaultconfigs kubejs mods packmenu *.zip forge*
-	curl -Lo 'ServerFiles-1.1.8.zip' 'https://edge.forgecdn.net/files/6587/699/ServerFiles-1.1.8.zip' || exit 9
-	unzip -u -o 'ServerFiles-1.1.8.zip' -d /data
+	curl -Lo 'ServerFiles-1.1.9.zip' 'https://edge.forgecdn.net/files/7976/946/ServerFiles-1.1.9.zip' || exit 9
+	unzip -u -o 'ServerFiles-1.1.9.zip' -d /data
 	if [[ $(find /data -maxdepth 2 -name 'mods' -type d | wc -c) -gt 11 ]]; then
 	  INSTALL_SUBDIR=$(find /data -maxdepth 2 -name 'mods' -type d | sed 's/\/mods//')
 	  mv -f $(echo $INSTALL_SUBDIR)/* /data
