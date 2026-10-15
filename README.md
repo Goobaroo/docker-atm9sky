@@ -1,4 +1,4 @@
-# [atm9sky-1.1.9](https://www.curseforge.com/minecraft/modpacks/all-the-mods-9-to-the-sky) on Curseforge
+# [atm9sky-1.1.9](https://www.curseforge.com/minecraft/modpacks/all-the-mods-9-sky) on Curseforge
 
 <!-- toc -->
 
